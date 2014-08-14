@@ -68,3 +68,24 @@ void DeleteNode( linkNode ** Node, int val)
     }
     
 }
+
+int main(){
+    
+    linkNode *z = new linkNode{8,NULL};
+    linkNode *y = new linkNode{11,z};
+    linkNode *x = new linkNode{13,y};
+    linkNode *t = new linkNode{1,x};
+    
+    
+    cout << " Init"<<endl;
+    
+    addNode(&t, 32);
+    cout << "Add OK" << endl;
+
+    DeleteNode(&t, 11);
+    cout << "Delete OK" << endl;
+
+	return 0;
+}
+
+
