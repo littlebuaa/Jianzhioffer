@@ -1,3 +1,15 @@
+#include <iostream>
+#include <stack>
+
+using namespace std;
+
+struct linkNode {
+    int value;
+    linkNode* next;
+};
+
+
+
 void PrintList(linkNode* node){
    
     stack<linkNode*> myStack;
@@ -25,3 +37,19 @@ void PrintListRecurcif(linkNode* node){
     cout << node->value<<endl;
 }
 
+
+int main(void){
+   cout << "LINKNODE" <<endl;
+    
+    linkNode z= {8,NULL};
+    linkNode y = {11,&z};
+    linkNode x = {13,&y};
+    linkNode t = {1,&x};
+    
+    PrintList(&t);
+    
+    PrintListRecurcif(&t);
+    
+    return 0;
+   
+}
