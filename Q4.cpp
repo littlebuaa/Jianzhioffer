@@ -28,7 +28,7 @@ void addNode(linkNode** originalNode, int val)
         linkNode * temp = *originalNode;
         
         while(temp->next !=NULL){
-            temp = (*originalNode)->next;
+            temp = temp->next;
         }
         temp ->next = newNode;
         
