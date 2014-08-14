@@ -32,7 +32,7 @@ void PrintListRecurcif(linkNode* node){
     if (node ==NULL) return;
     
     if (node->next !=NULL)
-        PrintList(node->next);
+        PrintListRecurcif(node->next);
     
     cout << node->value<<endl;
 }
